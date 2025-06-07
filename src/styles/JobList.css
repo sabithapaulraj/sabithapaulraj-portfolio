@@ -1,0 +1,8 @@
+/* JobList.css */
+.joblist-container {
+    background-color: #10141a; /* Light navy color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin: 20px 0; /* Optional: Add margin for spacing */
+    overflow: auto; /* Handle overflow content */
+  }
