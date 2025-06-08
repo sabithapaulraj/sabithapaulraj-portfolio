@@ -1,3 +1,8 @@
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--standard-accent-yellow); }
+}
+
 #intro {
     display: flex;
     flex-direction: column;
@@ -11,41 +16,52 @@
   }
   
   .Typist {
-    color: var(--lightest-slate);
+    color: var(--standard-accent-yellow);
     text-align: center;
     font-size: 76px;
     margin-top: -30px;
     white-space: nowrap;
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
   }
   .Typist .Cursor--blinking {
-    color: var(--green-bright);
+    color: var(--standard-accent-yellow);
     padding-left: 4px;
+    animation: blink-caret 0.75s step-end infinite;
   }
   
   .intro-title {
     font-family: "NTR", sans-serif;
     font-size: 86px;
-    
+    color: var(--standard-accent-yellow);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
   }
   .intro-name {
     font-family: "NTR", sans-serif;
-    color: var(--green-bright);
     font-weight: bold;
     font-size: 86px;
-    
+    color: var(--standard-accent-yellow);
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
   }
   
   .intro-subtitle {
     margin-top: -36px;
     font-family: "NTR", sans-serif;
-    color: var(--slate);
+    color: var(--standard-light-grey);
     text-align: center;
     font-weight: 300;
     font-size: 48px;
   }
   
   .intro-desc {
-    color: var(--slate);
+    color: var(--standard-text-white);
     font-family: "NTR", sans-serif;
     font-size: 22px;
     text-align: center;
@@ -60,12 +76,18 @@
     align-self: center;
     padding: 10px 30px;
     cursor: pointer;
-    border: 1px solid var(--green-bright);
+    border: 1px solid var(--standard-accent-yellow);
     border-radius: 4px;
+    background-color: transparent;
+    color: var(--standard-accent-yellow);
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
   }
   
   .intro-contact:hover {
-    background-color: var(--lightest-navy);
+    background-color: var(--standard-dark-grey);
+    box-shadow: none;
+    transform: translateY(-3px);
   }
   
   b {
@@ -122,21 +144,22 @@
 .custom-download-cv-button {
   display: flex;
   align-items: center;
-  background-color: #64ffda !important; /* Match the color of "sabitha paulraj" */
-  color: black !important; /* Custom text color */
+  background-color: var(--standard-accent-yellow) !important; 
+  color: var(--standard-background) !important; 
   font-family: "Lucida Console", "Courier New", monospace;
-
   border: none !important;
-  padding: 5px 10px !important; /* Increase padding to make the button bigger */
+  padding: 5px 10px !important; 
   border-radius: 5px !important;
   cursor: pointer !important;
-  font-size: 18px !important; /* Increase font size */
-  transition: background-color 0.3s ease !important;
-  margin-right: 20px !important; /* Add space between the button and social links */
+  font-size: 18px !important; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 20px !important; 
+  box-shadow: none;
 }
 
 .custom-download-cv-button:hover {
-  background-color: #45a049 !important; /* Custom hover color */
+  background-color: var(--standard-dark-grey) !important; 
+  box-shadow: none;
 }
 
 .custom-download-cv-button svg {
@@ -150,9 +173,11 @@
 
 .social-links a {
   margin-right: 10px;
-  color: inherit; /* Ensure the icon color matches the text color */
+  color: var(--standard-text-white); 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #64ffda; /* Change color on hover */
+  color: var(--standard-accent-yellow); 
+  text-shadow: none;
 }

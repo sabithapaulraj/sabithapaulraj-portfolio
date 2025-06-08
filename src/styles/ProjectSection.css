@@ -1,0 +1,287 @@
+#projects {
+    margin: auto;
+    padding-top: 100px;
+  max-width: 1000px;
+  min-height: 50vh;
+  }
+  
+  .advanced-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 60px;
+    border: 2px solid var(--standard-accent-yellow); /* Fluorescent yellow border */
+    box-shadow: 0px 0px 25px 8px rgba(255, 255, 0, 0.7); /* Glowing effect */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  }
+  
+  .advanced-carousel-container:hover {
+    transform: scale(1.01); /* Slightly expand on hover */
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform: translateX(100%);
+  }
+  
+  .carousel-slide.active {
+    transform: translateX(0);
+  }
+  
+  .carousel-slide.prev {
+    transform: translateX(-100%);
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out; /* Smooth transition for parallax effect */
+  }
+  
+  .carousel-caption-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  }
+  
+  .carousel-caption-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: var(--standard-text-white);
+    text-align: center; /* Centering carousel text */
+  }
+  
+  .carousel-title {
+    font-family: "NTR", sans-serif; /* Set font to NTR */
+    font-size: 3rem; /* md:text-5xl */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--standard-accent-yellow); /* Using accent color for title */
+  }
+  
+  .carousel-description {
+    font-family: "NTR", sans-serif; /* Set font to NTR */
+    font-size: 1.125rem; /* text-lg md:text-xl */
+    margin-bottom: 1.5rem;
+  }
+  
+  .carousel-techstack {
+    font-family: "NTR", sans-serif; /* Set font to NTR */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--standard-light-grey);
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.3); /* bg-white/30 */
+    padding: 0.5rem;
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow to transition */
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* hover:bg-white/50 */
+    box-shadow: 0px 0px 15px 5px var(--standard-accent-yellow); /* Glowing effect on hover */
+  }
+  
+  .carousel-button-left {
+    left: 1rem;
+  }
+  
+  .carousel-button-right {
+    right: 1rem;
+  }
+  
+  .carousel-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--standard-accent-yellow); /* Set icon color to fluorescent yellow */
+  }
+  
+  .carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    space-x: 0.5rem;
+  }
+  
+  .carousel-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px; /* rounded-full */
+    background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-dot.active {
+    background-color: var(--standard-text-white); /* bg-white */
+  }
+  
+  .projects-grid {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, equal width */
+    gap: 20px; /* Gap between cards */
+    /* Removed flex-direction, flex-wrap, overflow-x, scroll-behavior, etc. */
+    padding: 0 10px; /* Keep padding */
+  }
+  
+  @media (max-width: 1080px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .projects-grid {
+      grid-template-columns: 1fr; /* Single column on mobile */
+    }
+  }
+  
+  .projects-card {
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    /* flex-shrink: 0; */ /* No longer needed with grid */
+    width: 100%; /* Take full width of grid column */
+    /* margin-right: 20px; */ /* Replaced by gap */
+    height: 100%;
+    padding: 2rem 1.75rem;
+    background-color: var(--standard-background);
+    border-radius: 16px;
+    box-shadow: none;
+    transition: none;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .projects-card:hover {
+    transform: translateY(-7px);
+    background-color: var(--standard-dark-grey);
+    box-shadow: 0px 0px 20px 5px var(--standard-accent-yellow); /* Added glowing box-shadow on hover */
+  }
+  
+  .card-header {
+    margin-top: -20px;
+    display: flex;
+    padding: 1.25em 0 !important;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: none !important;
+  }
+  .folder-icon {
+    color: var(--standard-accent-yellow);
+    text-shadow: none;
+  }
+  
+  .github-icon {
+    margin-top: 6px;
+    color: var(--standard-accent-yellow); /* Changed to fluorescent yellow */
+    transition: none;
+  }
+  .github-icon:hover {
+    color: var(--standard-accent-yellow);
+    text-shadow: none;
+  }
+  
+  .open-icon {
+    margin-left: 10px;
+    color: var(--standard-accent-yellow); /* Changed to fluorescent yellow */
+    transition: none;
+  }
+  
+  .open-icon:hover {
+    color: var(--standard-accent-yellow);
+    text-shadow: none;
+  }
+  
+  .projects-card .card-title {
+    font-family: "NTR", sans-serif;
+    color: var(--standard-accent-yellow);
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: none;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    margin-bottom: 15px;
+  }
+  
+  .card-desc {
+    font-family: "NTR", sans-serif;
+    color: var(--standard-text-white);
+    font-size: 18px;
+    padding-bottom: 40px;
+  }
+  
+  .card-tech {
+    font-family: "NTR", sans-serif;
+    color: var(--standard-light-grey);
+    font-size: 16px;
+    text-shadow: none;
+  }
+  
+  /* Responsive adjustments for the new carousel */
+  @media only screen and (max-width: 600px) {
+    .advanced-carousel-container {
+      height: 350px;
+    }
+    .carousel-title {
+      font-size: 2rem;
+    }
+    .carousel-description {
+      font-size: 1rem;
+    }
+    .carousel-techstack {
+      font-size: 0.875rem;
+    }
+    .carousel-button {
+      padding: 0.3rem;
+    }
+    .carousel-icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    .carousel-dots {
+      bottom: 0.5rem;
+    }
+    .carousel-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+  }
+  
+  /* Other Projects Container */
+  .other-projects-container {
+    margin-top: 60px; /* Space between carousel and scroller */
+  }
+
+  .other-projects-container h2 {
+    font-family: "NTR", sans-serif; /* Apply NTR font */
+    color: var(--standard-accent-yellow); /* Apply fluorescent yellow color */
+    text-align: center; /* Center the title */
+    margin-bottom: 40px; /* Add some space below the title */
+  }
+  
+  

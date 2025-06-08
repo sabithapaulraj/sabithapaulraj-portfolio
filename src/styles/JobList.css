@@ -1,8 +1,48 @@
 /* JobList.css */
 .joblist-container {
-    background-color: #10141a; /* Light navy color */
+    background-color: var(--standard-background); /* Card background color */
     padding: 20px; /* Adjust padding as needed */
     border-radius: 8px; /* Optional: Add rounded corners */
     margin: 20px 0; /* Optional: Add margin for spacing */
     overflow: auto; /* Handle overflow content */
+    box-shadow: none; /* Removed subtle shadow for depth */
+    transition: none;
   }
+
+.joblist-job-title {
+  font-weight: bold;
+  color: var(--standard-accent-yellow); /* Changed to solid fluorescent yellow */
+  background: none; /* Removed background gradient */
+  -webkit-background-clip: unset; /* Removed background clip */
+  -webkit-text-fill-color: unset; /* Removed text fill color */
+}
+
+.joblist-job-company {
+  color: var(--standard-accent-yellow); /* Changed to solid fluorescent yellow */
+  background: none; /* Removed background gradient */
+  -webkit-background-clip: unset; /* Removed background clip */
+  -webkit-text-fill-color: unset; /* Removed text fill color */
+}
+
+.joblist-duration {
+  color: var(--standard-light-grey);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.job-description li {
+  color: var(--standard-text-white);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  font-family: "NTR", sans-serif;
+}
+
+.job-description li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--standard-accent-yellow);
+}

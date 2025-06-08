@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import Intro from './components/Intro';
 import About from './components/About';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
+import ProjectSection from './components/ProjectSection';
 import Credits from './components/Credits';
 
 function App(): React.ReactNode {
@@ -15,7 +15,7 @@ function App(): React.ReactNode {
         <Intro></Intro>
         <About></About>
         <Experience></Experience>
-        <Projects></Projects>
+        <ProjectSection></ProjectSection>
         <Credits></Credits>
       </div>
     </div>

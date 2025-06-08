@@ -19,9 +19,11 @@ html {
 
 .App {
   font-family: "NTR";
-  background-color: var(--navy);
+  background-color: var(--standard-background);
   display: flex;
   margin: auto;
+  width: 100%;
+  min-height: 100%;
 }
 .App-logo {
   height: 40vmin;
@@ -30,21 +32,20 @@ html {
 
 a {
   text-decoration: none !important;
-  color: var(--green-bright) !important;
+  color: var(--standard-accent-yellow) !important;
+  text-shadow: none;
 }
 
 #content {
   /* padding: 80px 200px; */
-  width: 100vw;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: 100%;
 }
 .rs-steps-horizontal .rs-steps-item-content {
   text-align: left;
 }
 
 ::selection {
-  background: var(--lightest-navy); /* WebKit/Blink Browsers */
+  background: var(--standard-dark-grey); /* WebKit/Blink Browsers */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -63,7 +64,8 @@ a {
 .section-header {
   display: flex;
   padding-bottom: 42px;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-header::after {
@@ -73,14 +75,22 @@ a {
   margin-top: 39px;
   height: 1px;
   margin-left: 20px;
-  background-color: var(--lightest-navy);
+  background-color: var(--standard-dark-grey);
 }
 
 .section-title {
   font-family: "NTR", sans-serif;
-  color: var(--lightest-slate);
   font-size: 46px;
   font-weight: bold;
+  color: var(--standard-accent-yellow);
+  text-shadow: none;
+}
+
+.gradient-text {
+  color: var(--standard-accent-yellow);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
 }
 
 @media only screen and (max-width: 600px) {
