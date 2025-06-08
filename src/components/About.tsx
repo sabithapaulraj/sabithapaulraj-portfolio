@@ -24,12 +24,9 @@ class About extends React.Component<{}, AboutState> {
   render(): React.ReactNode {
     const one = (
       <p>
-        I am currently in 3rd year of pursuing my Under-Graduation in  <span className="green-bright-text"><b>Computer Science and Engineering</b></span> with <span className="green-bright-text"><b>Specialization in Data Analytics</b> </span>at
-        
-        <a href="https://www.saveetha.ac.in/"> Saveetha Engineering College.</a> I have developed a strong expertise
-         in <b>Web Development, Machine Learning, and Data Analysis. </b>
-         Passionate about solving real-world problems through coding, I am actively seeking opportunities to 
-         expand my skills and contribute to impactful projects.
+        I'm currently in my 3rd year of pursuing my Under-Graduation in  <span className="green-bright-text"><b>Computer Science and Engineering</b></span> at
+        <a href="https://www.saveetha.ac.in/"> Saveetha Engineering College.</a> I'm passionate about building scalable software and AI-powered products. <b />
+        I worked as a Data Analyst Intern at <a href="https://www.bmw.in/en/index.html">BMW Group India</a>, where I worked on  backend automation, AI tools, and global database systems that support plants across 6+ countries.
       </p>
     );
     const two = (
@@ -40,20 +37,30 @@ class About extends React.Component<{}, AboutState> {
 
     const tech_stack: string[] = [
       "Python",
-      "C & C++",
       "Java",
-      "Data Analytics",
+      "Javascript",
+      "Typescript",
       "MERN Stack",
-      "Machine Learning",
+      "Spring Boot",
+      "Software Development",
+      "MySQL",
+      "AWS",
+      "AI / Machine Learning",
+      "Generative AI",
+      "Data Analytics",
       "Deep Learning",
-      "Neural Networks",
+      "Computer Vision",
+      "NLP",
+      "Databases",
+      
+      
     ];
 
     return (
       <div id="about">
         <FadeInSection>
           <div className="section-header ">
-            <span className="section-title">About Me</span>
+            <span className="section-title">/about me</span>
           </div>
           <div className="about-content">
             <div className="about-description">
@@ -69,7 +76,7 @@ class About extends React.Component<{}, AboutState> {
               {[two]}
             </div>
             <div className="about-image">
-              <img alt="Sabitha Paulraj" src={"/assets/sabithapaulraj.jpg"} />
+              <img alt="Sabitha Paulraj" src={"/assets/profile.jpg"} />
             </div>
           </div>
         </FadeInSection>

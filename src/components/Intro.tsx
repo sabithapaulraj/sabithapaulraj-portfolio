@@ -7,8 +7,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import FadeInSection from "./FadeInSection.tsx";
-import Button from 'react-bootstrap/Button'; // Import the Button component from react-bootstrap
-import { FiDownload } from "react-icons/fi"; // Import the FiDownload icon
+import Button from 'react-bootstrap/Button'; 
+import { FiDownload } from "react-icons/fi"; 
 
 interface IntroState {
   expanded: boolean;
@@ -37,35 +37,34 @@ class Intro extends React.Component<{}, IntroState> {
         <Typist avgTypingDelay={120} key="my-unique-key" cursor={{ show: false }}>
           <span className="intro-title">
             {"hello , i'm "}
-            <span className="intro-name">{"sabitha paulraj"}</span>
+            <span className="intro-name">{"sabitha paulraj."}</span>
           </span>
         </Typist>
         <FadeInSection>
           <div className="intro-desc">
-            A passionate CompSci Student from Chennai, India. I'm always eager
-            to explore new technologies and to collaborate with like-minded
-            individuals. My passion lies in integrating emerging technologies
-            into practical applications and developing solutions for real-world
-            challenges.
+          I’m a 3rd yr CS undergrad obsessed with ML and GenAI. You’ll usually find me working with LLMs or deep-diving into NLP just for fun. If it's AI and it's cool — I dive into it.
+          <br />
+          Lately, I’ve been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale. 
+          <br />
+          I also love spinning up “brainrot” side projects — like spending 6 hours automating a 5-minute task because... why not?
+          <br />
+          Right now, I’m exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I’m planning to launch my own blog one day to share my daily brainrot contents about tech lol.
           </div>
           <div className="intro-actions">
-            <a href="/resume.pdf" download>
+            <a href="/Sabitha_Resume.pdf" download>
               <Button className="custom-download-cv-button">
                 <FiDownload /> Download CV
               </Button>
             </a>
             <div className="social-links">
-              <a href="mailto:gazijarin@gmail.com">
+              <a href="mailto:sabithaapaulraj@gmail.com">
                 <EmailRoundedIcon style={{ fontSize: 20 }} />
               </a>
-              <a href="https://github.com/gazijarin" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/sabithapaulraj" target="_blank" rel="noopener noreferrer">
                 <GitHubIcon style={{ fontSize: 19 }} />
               </a>
-              <a href="https://www.linkedin.com/in/gazi-jarin-3644b0172/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/sabithapaulraj/" target="_blank" rel="noopener noreferrer">
                 <LinkedInIcon style={{ fontSize: 21 }} />
-              </a>
-              <a href="https://medium.com/@gazijarin.ai" target="_blank" rel="noopener noreferrer">
-                <BorderColorIcon style={{ fontSize: 20 }} />
               </a>
             </div>
           </div>
