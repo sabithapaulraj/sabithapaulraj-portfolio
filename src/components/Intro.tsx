@@ -1,14 +1,11 @@
 import React from "react";
 import "../styles/Intro.css";
-import Typist from "react-typist";
-import "react-typist/dist/Typist.css";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import BorderColorIcon from "@mui/icons-material/BorderColor";
 import FadeInSection from "./FadeInSection.tsx";
-import Button from 'react-bootstrap/Button'; 
-import { FiDownload } from "react-icons/fi"; 
+import Button from 'react-bootstrap/Button';
+import { FiDownload } from "react-icons/fi";
 
 interface IntroState {
   expanded: boolean;
@@ -26,30 +23,34 @@ class Intro extends React.Component<{}, IntroState> {
     };
     this.handleSelect = this.handleSelect.bind(this);
   }
+
   handleSelect(eventKey: string) {
     this.setState({
       activeKey: eventKey,
     });
   }
+
   render(): React.ReactNode {
     return (
       <div id="intro">
-        <Typist avgTypingDelay={120} key="my-unique-key" cursor={{ show: false }}>
-          <span className="intro-title">
-            {"hello , i'm "}
-            <span className="intro-name">{"sabitha paulraj."}</span>
-          </span>
-        </Typist>
+        <div className="intro-title">
+          {"hello, i'm "}
+          <span className="intro-name">sabitha paulraj.</span>
+          <br />
+          
+        </div>
+
         <FadeInSection>
           <div className="intro-desc">
-          I’m a 3rd yr CS undergrad obsessed with ML and GenAI. You’ll usually find me working with LLMs or deep-diving into NLP just for fun. If it's AI and it's cool — I dive into it.
-          <br />
-          Lately, I’ve been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale. 
-          <br />
-          I also love spinning up “brainrot” side projects — like spending 6 hours automating a 5-minute task because... why not?
-          <br />
-          Right now, I’m exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I’m planning to launch my own blog one day to share my daily brainrot contents about tech lol.
+            I’m a 3rd yr CS undergrad obsessed with ML and GenAI. You’ll usually find me working with LLMs or deep-diving into NLP just for fun. If it's AI and it's cool — I dive into it.
+            <br />
+            Lately, I’ve been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale.
+            <br />
+            I also love spinning up “brainrot” side projects — like spending 6 hours automating a 5-minute task because... why not?
+            <br />
+            Right now, I’m exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I’m planning to launch my own blog one day to share my daily brainrot contents about tech lol.
           </div>
+
           <div className="intro-actions">
             <a href="/Sabitha_Resume.pdf" download>
               <Button className="custom-download-cv-button">
@@ -74,4 +75,4 @@ class Intro extends React.Component<{}, IntroState> {
   }
 }
 
-export default Intro; 
+export default Intro;
