@@ -56,14 +56,14 @@
   }
   
   .about-image {
-    padding-left: 40px;
+    /* padding-left: 40px; */
   }
   
   .about-image img {
     max-width: 300px;
     height: auto;
     border-radius: 10px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
     border: 2px solid var(--standard-accent-yellow);
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;

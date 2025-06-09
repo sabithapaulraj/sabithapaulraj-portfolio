@@ -6,6 +6,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%; /* Changed from 100vh for better cross-device compatibility */
+  box-sizing: border-box;
 }
 
 body {
