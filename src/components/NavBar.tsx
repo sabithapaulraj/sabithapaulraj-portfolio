@@ -41,10 +41,10 @@ class NavBar extends React.Component<{}, NavBarState> {
         <div className="mobile-nav-dropdown" style={{zIndex: 9999, position: 'fixed', right: 0, top: 56}}>
           <div className="mobile-nav-title">Sabitha.</div>
           <Nav className="mobile-nav-list">
-            <Nav.Link href="#intro" onClick={this.closeDropdown}>home</Nav.Link>
-            <Nav.Link href="#about" onClick={this.closeDropdown}>about</Nav.Link>
-            <Nav.Link href="#experience" onClick={this.closeDropdown}>experience</Nav.Link>
-            <Nav.Link href="#projects" onClick={this.closeDropdown}>projects</Nav.Link>
+            <Nav.Link href="#intro" onClick={this.closeDropdown}>/home</Nav.Link>
+            <Nav.Link href="#about" onClick={this.closeDropdown}>/about</Nav.Link>
+            <Nav.Link href="#experience" onClick={this.closeDropdown}>/experience</Nav.Link>
+            <Nav.Link href="#projects" onClick={this.closeDropdown}>/projects</Nav.Link>
           </Nav>
         </div>
       </>,
@@ -60,17 +60,17 @@ class NavBar extends React.Component<{}, NavBarState> {
           {isMobile ? (
             <div className="mobile-nav-wrapper">
               <Button className="mobile-menu-btn" onClick={this.toggleDropdown} aria-label="Open navigation menu">
-                <span className="navbar-toggler-icon" />
+                <span className="navbar-toggler-icon"><div></div><div></div><div></div></span>
               </Button>
               {showDropdown && this.renderMobileDropdown()}
             </div>
           ) : (
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#intro">home</Nav.Link>
-                <Nav.Link href="#about">about</Nav.Link>
-                <Nav.Link href="#experience">experience</Nav.Link>
-                <Nav.Link href="#projects">projects</Nav.Link>
+                <Nav.Link href="#intro">/home</Nav.Link>
+                <Nav.Link href="#about">/about</Nav.Link>
+                <Nav.Link href="#experience">/experience</Nav.Link>
+                <Nav.Link href="#projects">/projects</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           )}

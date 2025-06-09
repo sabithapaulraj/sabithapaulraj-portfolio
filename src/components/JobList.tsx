@@ -2,7 +2,6 @@ import React from "react";
 import { Theme } from "@mui/material/styles";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import FadeInSection from "./FadeInSection.tsx";
 
@@ -25,7 +24,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography style={{ fontFamily: 'NTR, sans-serif' }}>{children}</Typography>
+          <div style={{ fontFamily: 'NTR, sans-serif' }}>{children}</div>
         </Box>
       )}
     </div>
