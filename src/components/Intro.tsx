@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FadeInSection from "./FadeInSection.tsx";
 import Button from 'react-bootstrap/Button';
 import { FiDownload } from "react-icons/fi";
+import { Typewriter } from 'react-simple-typewriter';
 
 interface IntroState {
   expanded: boolean;
@@ -34,21 +35,24 @@ class Intro extends React.Component<{}, IntroState> {
     return (
       <div id="intro">
         <div className="intro-title">
-          {"hello, i'm "}
-          <span className="intro-name">sabitha paulraj.</span>
-          <br />
-          
+          <Typewriter
+            words={["hello, i'm sabitha paulraj."]}
+            typeSpeed={100}
+            cursor={true}
+            cursorStyle="_"
+            delaySpeed={500}
+          />
         </div>
 
         <FadeInSection>
           <div className="intro-desc">
-            I’m a 3rd yr CS undergrad obsessed with ML and GenAI. You’ll usually find me working with LLMs or deep-diving into NLP just for fun. If it's AI and it's cool — I dive into it.
+            I'm a 3rd yr CS undergrad obsessed with ML and GenAI. You'll usually find me working with LLMs or deep-diving into NLP just for fun. If it's AI and it's cool — I dive into it.
             <br />
-            Lately, I’ve been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale.
+            Lately, I've been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale.
             <br />
-            I also love spinning up “brainrot” side projects — like spending 6 hours automating a 5-minute task because... why not?
+            I also love spinning up "brainrot" side projects — like spending 6 hours automating a 5-minute task because... why not?
             <br />
-            Right now, I’m exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I’m planning to launch my own blog one day to share my daily brainrot contents about tech lol.
+            Right now, I'm exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I'm planning to launch my own blog one day to share my daily brainrot contents about tech lol.
           </div>
 
           <div className="intro-actions">
