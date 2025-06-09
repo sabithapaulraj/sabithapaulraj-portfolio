@@ -1,112 +1,113 @@
 #about {
-    min-height: 50vh;
-    margin: auto;
-    max-width: 1000px;
-    padding-top: 100px;
+  min-height: 50vh;
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 100px;
+}
+
+.about-description ul {
+  padding-top: 20px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, auto));
+}
+
+.about-description li {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: var(--standard-text-white);
+}
+
+.about-description li::before {
+  content: "▹    ";
+  color: var(--standard-accent-yellow);
+  position: absolute;
+  left: 0;
+  text-shadow: none;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-description {
+  font-family: "NTR", sans-serif;
+  color: var(--standard-text-white);
+  max-width: 600px;
+  font-size: 22px;
+  text-align: justify;
+  margin: 0;
+}
+
+.about-description a,
+.about-description b {
+  font-size: 21px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  text-shadow: none;
+}
+
+.about-image {
+   padding-left: 40px; 
+}
+
+.about-image img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 30px; 
+  border: 4px solid #ffff00; /* Fluorescent yellow */
+  box-shadow: 0 0 24px 8px #ffff00, 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 788px) {
+  .about-image img {
+    max-width: 200px;
   }
-  
-  .about-description ul {
-    padding-top: 20px;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(150px, auto));
+}
+
+.about-image:hover img {
+  transform: translateY(-7px);
+  border: 4px solid #ffff00; /* Fluorescent yellow */
+  box-shadow: 0 0 24px 8px #ffff00, 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+  #about {
+    height: unset;
+    padding-left: unset;
+    padding-right: unset;
+    padding-top: 30%;
   }
-  
-  .about-description li {
-    position: relative;
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 18px;
-    color: var(--standard-text-white);
-  }
-  
-  .about-description li::before {
-    content: "▹    ";
-    color: var(--standard-accent-yellow);
-    position: absolute;
-    left: 0;
-    text-shadow: none;
-  }
-  
-  .about-content {
-    display: flex;
-    flex-direction: row;
-  }
-  
+
   .about-description {
-    font-family: "NTR", sans-serif;
-    color: var(--standard-text-white);
-    max-width: 600px;
-    font-size: 22px;
+    font-size: 18px;
     text-align: justify;
-    margin: 0;
   }
-  
+
   .about-description a,
   .about-description b {
-    font-size: 21px;
-    font-weight: bold;
-    color: var(--standard-accent-yellow);
-    background: none;
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-    text-shadow: none;
+    font-size: 17px;
   }
-  
-  .about-image {
-     padding-left: 40px; 
-  }
-  
+
   .about-image img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-left: 30px; 
-    box-shadow: 6px 13px 23px -5px rgba(0, 0, 0, 0.46);
-    border: 2px solid var(--standard-accent-yellow);
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: none;
   }
-  
-  @media only screen and (max-width: 788px) {
-    .about-image img {
-      max-width: 200px;
-    }
+
+  .about-content {
+    display: unset;
   }
-  
-  .about-image:hover img {
-    transform: translateY(-7px);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  }
-  
-  @media only screen and (max-width: 600px) {
-    #about {
-      height: unset;
-      padding-left: unset;
-      padding-right: unset;
-      padding-top: 30%;
-    }
-  
-    .about-description {
-      font-size: 18px;
-      text-align: justify;
-    }
-  
-    .about-description a,
-    .about-description b {
-      font-size: 17px;
-    }
-  
-    .about-image img {
-      display: none;
-    }
-  
-    .about-content {
-      display: unset;
-    }
-  }
-  .green-bright-text {
-    color: var(--standard-accent-yellow);
-    text-shadow: none;
+}
+.green-bright-text {
+  color: var(--standard-accent-yellow);
+  text-shadow: none;
 }
