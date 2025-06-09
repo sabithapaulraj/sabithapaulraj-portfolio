@@ -105,26 +105,6 @@ const ProjectSection: React.FC = () => {
       techStack: "MongoDB, ReactJS, NodeJS, ExpressJS, Javascript",
       link: "https://github.com/sabithapaulraj/JWT-Login-Signup"
     },
-    "SEC Consultancy Services Website": {
-      desc: "Designed to help users efficiently organize, track, and manage their tasks and to-do lists. ",
-      techStack: "HTML, CSS",
-      link: "https://github.com/sabithapaulraj/sec_consultancy_services_website"
-    },
-    "LogoDesign Company Website": {
-      desc: "Designed to manage courses, including features for organizing, tracking, and administering course-related activities.",
-      techStack: "HTML, CSS, BootStrap",
-      link: "https://github.com/sabithapaulraj/bootstrap_template"
-    },
-    "Fashion Sale Website": {
-      desc: " Fashion Sale website built to showcase and sell fashion products online. ",
-      techStack: "HTML, CSS",
-      link: "https://github.com/sabithapaulraj/JWT-Login-Signup"
-    },
-    "Travel Explorer - Chennai Website": {
-      desc: "Explorer is a travel explorer website focused on discovering and experiencing Chennai. ",
-      techStack: "HTML, CSS",
-      link: "https://github.com/sabithapaulraj/sec_consultancy_services_website"
-    },
     
   };
 

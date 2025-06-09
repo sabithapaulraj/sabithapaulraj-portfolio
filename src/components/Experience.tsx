@@ -5,7 +5,7 @@ import FadeInSection from "./FadeInSection";
 import { useTheme } from "@mui/material/styles";
 
 const Experience: React.FC = () => {
-  const theme = useTheme(); // This will be used in JobList, so it needs to be accessible, or JobList needs to manage its own theme
+  const theme = useTheme(); 
   const [value, setValue] = useState(0);
 
   const experienceItems: { [key: string]: { jobTitle: string; duration: string; desc: string[]; } } = {

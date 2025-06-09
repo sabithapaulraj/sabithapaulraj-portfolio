@@ -1,9 +1,9 @@
 .navbar {
-  background-color: var(--standard-background); /* Ensure this matches your theme */
+  background-color: var(--standard-background); 
   color: var(--standard-text-white);
   font-family: "Lucida Console", "Courier New", monospace;
   font-weight: bold;
-  box-shadow: none; /* Removed subtle shadow for depth */
+  box-shadow: none; 
   transition: none;
 }
 
@@ -11,9 +11,9 @@
   color: var(--standard-accent-yellow) !important;
   text-shadow: none;
   transition: none;
-  background: none; /* Removed background gradient */
-  -webkit-background-clip: unset; /* Removed background clip */
-  -webkit-text-fill-color: unset; /* Removed text fill color */
+  background: none; 
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset; 
 }
 
 .navbar .navbar-brand:hover {
@@ -26,7 +26,7 @@
 }
 
 .navbar .navbar-nav .nav-link:hover {
-  color: var(--standard-text-white) !important; /* Keep original hover color, since the base will be gradient */
+  color: var(--standard-text-white) !important; 
   text-shadow: none;
 }
 
@@ -293,14 +293,14 @@
 }
 */
 .navbar .navbar-brand h1 {
-  color: var(--standard-accent-yellow); /* Changed to solid fluorescent yellow */
+  color: var(--standard-accent-yellow); 
   text-shadow: none;
-  background: none; /* Removed background gradient */
-  -webkit-background-clip: unset; /* Removed background clip */
-  -webkit-text-fill-color: unset; /* Removed text fill color */
+  background: none; 
+  -webkit-background-clip: unset; 
+  -webkit-text-fill-color: unset; 
 }
 
-/* Custom Offcanvas for dynamic height and vertical centering */
+
 .custom-offcanvas.offcanvas-end {
   height: auto !important;
   max-height: unset !important;

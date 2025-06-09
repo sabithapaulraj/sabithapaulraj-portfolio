@@ -6,14 +6,14 @@
   
   .ending-credits {
     font-family: "NTR", sans-serif;
-    color: var(--standard-accent-yellow); /* Changed to solid fluorescent yellow */
+    color: var(--standard-accent-yellow);
     text-align: center;
     width: 100%;
     font-size: 16px;
     padding-bottom: 40px;
     text-shadow: none;
-    background: none; /* Removed background gradient */
-    -webkit-background-clip: unset; /* Removed background clip */
-    -webkit-text-fill-color: unset; /* Removed text fill color */
+    background: none;
+    -webkit-background-clip: unset; 
+    -webkit-text-fill-color: unset; 
   }
   
