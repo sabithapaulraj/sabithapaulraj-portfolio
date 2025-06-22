@@ -54,7 +54,7 @@ class Intro extends React.Component<{}, IntroState> {
             <br />
             Lately, I've been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale.
             <br />
-             I read tech blogs like people binge shows, and I'm plannthing to launch my own blog one day to share my daily brainrot contents about tech lol.
+             I read tech blogs like people binge shows, and I'm planning to launch my own blog one day to share my daily brainrot contents about tech lol.
           </div>
 
           <div className="intro-actions">
