@@ -1,16 +1,14 @@
+html, body, #root, .App, .page-container {
+  background: #181818 !important;
+}
+
 html, body {
   margin: 0;
-  font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'NTR', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%; /* Changed from 100vh for better cross-device compatibility */
   box-sizing: border-box;
-}
-
-body {
-  background-color: var(--standard-background);
   color: var(--standard-text-white);
   overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -34,4 +32,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+nav, .nav-logo, .top-links, .home-nav-top, .home-nav-top-right, .home-nav-middle-left, .home-nav-middle-right, .home-nav-bottom, .home-container a {
+  font-family: 'NTR', Arial, sans-serif !important;
 }

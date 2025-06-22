@@ -10,8 +10,8 @@
     text-align: center;
     margin: auto;
     max-width: 1000px;
-    padding-top: 200px;
-    min-height: 100vh;
+    padding-top: 50px;
+    min-height: calc(100vh - 80px);
     
   }
   
@@ -98,7 +98,7 @@
     #intro {
       min-height: unset;
       padding-left: unset;
-      padding-top: unset;
+      padding-top: 20px;
       margin: 0;
       align-items: center;
     }

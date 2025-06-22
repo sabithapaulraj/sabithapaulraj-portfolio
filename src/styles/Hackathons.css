@@ -1,0 +1,348 @@
+.hackathons-container {
+  min-height: calc(100vh - 80px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hackathons-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hackathons-title {
+  font-family: "NTR", sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+.hackathons-subtitle {
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  color: var(--standard-text-white);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hackathons-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.hackathon-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--standard-accent-yellow);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+}
+
+.stat-number {
+  font-family: "NTR", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+}
+
+.stat-label {
+  font-family: "NTR", sans-serif;
+  font-size: 16px;
+  color: var(--standard-text-white);
+  opacity: 0.8;
+}
+
+.hackathons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hackathon-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hackathon-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--standard-accent-yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.hackathon-item:hover::before {
+  transform: scaleX(1);
+}
+
+.hackathon-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--standard-accent-yellow);
+  box-shadow: 0 8px 25px rgba(100, 255, 218, 0.15);
+}
+
+.hackathon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hackathon-header h3 {
+  font-family: "NTR", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin: 0;
+}
+
+.hackathon-date {
+  font-family: "NTR", sans-serif;
+  font-size: 14px;
+  color: var(--standard-light-grey);
+  background: rgba(100, 255, 218, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.hackathon-description {
+  font-family: "NTR", sans-serif;
+  font-size: 16px;
+  color: var(--standard-text-white);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.hackathon-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tech-tag {
+  font-family: "NTR", sans-serif;
+  font-size: 12px;
+  color: var(--standard-accent-yellow);
+  background: rgba(100, 255, 218, 0.1);
+  padding: 4px 12px;
+  border-radius: 15px;
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-1px);
+}
+
+.hackathon-achievement {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.achievement-badge {
+  font-family: "NTR", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--standard-background);
+  background: linear-gradient(135deg, var(--standard-accent-yellow), #ffd700);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.upcoming-hackathons {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 40px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  text-align: center;
+}
+
+.upcoming-hackathons h2 {
+  font-family: "NTR", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 15px;
+}
+
+.upcoming-hackathons p {
+  font-family: "NTR", sans-serif;
+  font-size: 18px;
+  color: var(--standard-text-white);
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.upcoming-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "NTR", sans-serif;
+  font-size: 16px;
+  color: var(--standard-text-white);
+  padding: 15px 20px;
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--standard-accent-yellow);
+  transition: all 0.3s ease;
+}
+
+.upcoming-item:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(5px);
+}
+
+.upcoming-icon {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .hackathons-container {
+    padding: 30px 15px;
+  }
+
+  .hackathons-title {
+    font-size: 48px;
+  }
+
+  .hackathons-subtitle {
+    font-size: 18px;
+  }
+
+  .hackathon-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+  }
+
+  .hackathon-item {
+    padding: 25px;
+  }
+
+  .hackathon-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hackathon-header h3 {
+    font-size: 20px;
+  }
+
+  .upcoming-hackathons {
+    padding: 30px 20px;
+  }
+
+  .upcoming-hackathons h2 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hackathons-title {
+    font-size: 36px;
+  }
+
+  .hackathons-subtitle {
+    font-size: 16px;
+  }
+
+  .hackathon-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .hackathon-item {
+    padding: 20px;
+  }
+
+  .hackathon-header h3 {
+    font-size: 18px;
+  }
+
+  .hackathon-description {
+    font-size: 14px;
+  }
+
+  .upcoming-hackathons {
+    padding: 25px 15px;
+  }
+
+  .upcoming-hackathons h2 {
+    font-size: 24px;
+  }
+
+  .upcoming-item {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+} 

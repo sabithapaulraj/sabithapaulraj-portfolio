@@ -1,8 +1,11 @@
 #about {
-  min-height: 50vh;
+  min-height: calc(100vh - 80px); /* Account for navbar height */
   margin: auto;
   max-width: 1000px;
-  padding-top: 100px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-description ul {
@@ -86,7 +89,8 @@
     height: unset;
     padding-left: unset;
     padding-right: unset;
-    padding-top: 30%;
+    padding-top: 20px; /* Reduced from 30% for better mobile layout */
+    min-height: unset;
   }
 
   .about-description {
@@ -110,4 +114,9 @@
 .green-bright-text {
   color: var(--standard-accent-yellow);
   text-shadow: none;
+}
+
+.about-container {
+    margin-top: 10px;
+    /* ...other styles... */
 }

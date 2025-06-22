@@ -1,0 +1,599 @@
+.sayhi-container {
+  min-height: calc(100vh - 80px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  margin: 60px auto 0 auto;
+  padding: 32px 24px;
+  background: rgba(24, 24, 24, 0.98);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+}
+
+.sayhi-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sayhi-title {
+  font-family: "NTR", sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+.sayhi-subtitle {
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  color: var(--standard-text-white);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--standard-accent-yellow), transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--standard-accent-yellow);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(100, 255, 218, 0.1);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: var(--standard-accent-yellow);
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background: var(--standard-accent-yellow);
+  color: var(--standard-background);
+  transform: scale(1.1);
+}
+
+.contact-details h3 {
+  font-family: "NTR", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-family: "NTR", sans-serif;
+  font-size: 16px;
+  color: var(--standard-text-white);
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.contact-link {
+  display: inline-block;
+  font-family: "NTR", sans-serif;
+  font-size: 14px;
+  color: var(--standard-accent-yellow);
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid var(--standard-accent-yellow);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.contact-link:hover {
+  background: var(--standard-accent-yellow);
+  color: var(--standard-background);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+}
+
+.availability-section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.availability-section h2 {
+  font-family: "NTR", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.availability-section p {
+  font-family: "NTR", sans-serif;
+  font-size: 18px;
+  color: var(--standard-text-white);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.availability-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.availability-list li {
+  font-family: "NTR", sans-serif;
+  font-size: 16px;
+  color: var(--standard-text-white);
+  padding: 12px 20px;
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid var(--standard-accent-yellow);
+  transition: all 0.3s ease;
+}
+
+.availability-list li:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(5px);
+}
+
+.response-time {
+  text-align: center;
+  padding: 20px;
+  background: rgba(100, 255, 218, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.response-time p {
+  font-family: "NTR", sans-serif;
+  font-size: 18px;
+  color: var(--standard-text-white);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .sayhi-container {
+    padding: 30px 15px;
+  }
+
+  .sayhi-title {
+    font-size: 48px;
+  }
+
+  .sayhi-subtitle {
+    font-size: 18px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-card {
+    padding: 25px;
+  }
+
+  .availability-section {
+    padding: 30px 20px;
+  }
+
+  .availability-section h2 {
+    font-size: 28px;
+  }
+
+  .availability-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sayhi-title {
+    font-size: 36px;
+  }
+
+  .sayhi-subtitle {
+    font-size: 16px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .contact-details h3 {
+    font-size: 20px;
+  }
+}
+
+.section-header {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-family: "NTR", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sayhi-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sayhi-form input,
+.sayhi-form textarea {
+  font-family: "NTR", sans-serif;
+  font-size: 1.2rem;
+  padding: 16px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 14px;
+  background: #181818;
+  color: #fff;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.sayhi-form input:focus,
+.sayhi-form textarea:focus {
+  border: 1.5px solid var(--standard-accent-yellow);
+  box-shadow: 0 0 0 2px rgba(255,255,0,0.12);
+}
+
+.sayhi-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.sayhi-form button {
+  margin-top: 10px;
+  font-family: "NTR", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #a259ff 0%, #ff5acd 100%);
+  border: none;
+  border-radius: 14px;
+  padding: 18px 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 12px 0 rgba(162,89,255,0.08);
+}
+
+.sayhi-form button:hover {
+  background: linear-gradient(90deg, #ff5acd 0%, #a259ff 100%);
+  transform: scale(1.04);
+}
+
+.sayhi-extra {
+    margin-top: 32px;
+    color: #fff;
+    font-family: "NTR", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.opportunities-section {
+    background: #181818;
+    border: 2px solid var(--standard-accent-yellow);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(255,255,0,0.10);
+    padding: 24px 28px 18px 28px;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.opportunities-section h2 {
+    font-size: 1.3rem;
+    color: var(--standard-accent-yellow);
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.opportunities-section ul {
+    margin: 0 0 0 0;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.opportunities-section li {
+    font-size: 1.1rem;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.opportunities-section li::before {
+    content: '▹';
+    color: var(--standard-accent-yellow);
+    font-size: 1.2em;
+    margin-right: 4px;
+}
+
+.response-time {
+    background: #181818;
+    border: 2px solid var(--standard-accent-yellow);
+    border-radius: 16px;
+    padding: 24px 28px;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 0;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 4px 24px 0 rgba(255,255,0,0.10);
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.response-time p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+.sayhi-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.sayhi-link {
+    font-size: 1.2rem;
+    color: var(--standard-text-white);
+    text-decoration: none;
+    font-family: "NTR", sans-serif;
+    transition: color 0.2s, text-decoration 0.2s;
+    word-break: break-all;
+}
+
+.sayhi-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sayhi-card {
+    background: #181818;
+    border: 2px solid var(--standard-accent-yellow);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(255,255,0,0.10);
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.sayhi-card:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 8px 32px 0 rgba(255,255,0,0.18);
+    border: 2.5px solid var(--standard-accent-yellow);
+    background: #181818;
+}
+
+.sayhi-link {
+    font-size: 1.2rem;
+    color: var(--standard-text-white);
+    text-decoration: none;
+    font-family: "NTR", sans-serif;
+    transition: color 0.2s, text-decoration 0.2s;
+    word-break: break-all;
+    font-weight: bold;
+}
+
+.sayhi-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-through-text {
+  color: var(--standard-text-white);
+  font-family: "NTR", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  margin-left: 2px;
+}
+
+.sayhi-links-row {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-bottom: 32px;
+  justify-content: flex-start;
+}
+
+.sayhi-card {
+  background: #181818;
+  border: 2px solid var(--standard-accent-yellow);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px 0 rgba(255,255,0,0.10);
+  padding: 24px 28px;
+  width: 100%;
+  max-width: 320px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  color: #fff;
+}
+
+.sayhi-card-title {
+  color: var(--standard-accent-yellow);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.sayhi-card-id {
+  color: var(--standard-text-white);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+.sayhi-card-btn {
+  background: transparent;
+  color: var(--standard-accent-yellow);
+  border: 2px solid var(--standard-accent-yellow);
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-family: "NTR", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 2px;
+}
+
+.sayhi-card-btn:hover {
+  background: var(--standard-accent-yellow);
+  color: #181818;
+}
+
+@media (max-width: 700px) {
+  .sayhi-links-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .sayhi-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+.response-time-wide {
+  display: flex;
+  align-items: center;
+  background: #111111;
+  border-left: 6px solid var(--standard-accent-yellow);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255,255,0,0.10);
+  padding: 32px 40px;
+  margin-top: 28px;
+  margin-bottom: 0;
+  width: calc(100% + 80px);
+  max-width: none;
+  position: relative;
+  left: -40px;
+}
+
+.response-time-icon {
+  font-size: 2.2rem;
+  margin-right: 28px;
+  color: var(--standard-accent-yellow);
+  flex-shrink: 0;
+}
+
+.response-time-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.response-time-label {
+  font-family: "NTR", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--standard-accent-yellow);
+  margin-bottom: 2px;
+}
+
+.response-time-message {
+  font-family: "NTR", sans-serif;
+  font-size: 1.1rem;
+  color: var(--standard-text-white);
+  opacity: 0.95;
+}
+
+@media (max-width: 700px) {
+  .response-time-wide {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 16px;
+    width: 100%;
+    left: 0;
+  }
+  .response-time-icon {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+} 

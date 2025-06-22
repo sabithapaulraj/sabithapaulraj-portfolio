@@ -1,11 +1,12 @@
 #experience {
-    min-height: 50vh;
+    min-height: calc(100vh - 80px); /* Account for navbar height */
     margin: 0 auto;
     max-width: 1000px;
-    padding: 100px 25px 0 25px;
+    padding: 10px 25px 0 25px; /* Reduced top padding from 100px */
     height: auto;
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
   }
   
   .job-list-root {
@@ -146,6 +147,8 @@
     #experience {
       padding-left: unset;
       padding-right: unset;
+      padding-top: 20px; /* Reduced for mobile */
+      min-height: unset;
     }
   
     .jss1 {
@@ -166,5 +169,10 @@
     .joblist-job-company {
       font-size: 22px;
     }
+  }
+  
+  .experience-container {
+    margin-top: 10px;
+    padding-top: 10px;
   }
   

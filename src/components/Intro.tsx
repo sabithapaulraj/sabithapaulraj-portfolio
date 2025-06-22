@@ -1,12 +1,16 @@
 import React from "react";
 import "../styles/Intro.css";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FadeInSection from "./FadeInSection.tsx";
+import FadeInSection from "./FadeInSection";
 import Button from 'react-bootstrap/Button';
 import { FiDownload } from "react-icons/fi";
 import { Typewriter } from 'react-simple-typewriter';
+import {
+    SiLinkedin,
+    SiGithub,
+    SiLeetcode,
+    SiSubstack
+} from "react-icons/si";
 
 interface IntroState {
   expanded: boolean;
@@ -50,9 +54,7 @@ class Intro extends React.Component<{}, IntroState> {
             <br />
             Lately, I've been getting into system design — learning how to architect large-scale systems, from LLDs to HLDs that actually scale.
             <br />
-            I also love spinning up "brainrot" side projects — like spending 6 hours automating a 5-minute task because... why not?
-            <br />
-            Right now, I'm exploring Quant ML, Embedded CV etc. I read tech blogs like people binge shows, and I'm planning to launch my own blog one day to share my daily brainrot contents about tech lol.
+             I read tech blogs like people binge shows, and I'm plannthing to launch my own blog one day to share my daily brainrot contents about tech lol.
           </div>
 
           <div className="intro-actions">
@@ -66,10 +68,16 @@ class Intro extends React.Component<{}, IntroState> {
                 <EmailRoundedIcon style={{ fontSize: 20 }} />
               </a>
               <a href="https://github.com/sabithapaulraj" target="_blank" rel="noopener noreferrer">
-                <GitHubIcon style={{ fontSize: 19 }} />
+                <SiGithub />
               </a>
               <a href="https://www.linkedin.com/in/sabithapaulraj/" target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon style={{ fontSize: 21 }} />
+                <SiLinkedin />
+              </a>
+              <a href="https://leetcode.com/u/sabithapaulraj/" target="_blank" rel="noopener noreferrer">
+                <SiLeetcode />
+              </a>
+              <a href="https://sabithapaulraj.substack.com/" target="_blank" rel="noopener noreferrer">
+                <SiSubstack />
               </a>
             </div>
           </div>
