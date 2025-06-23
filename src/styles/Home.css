@@ -7,7 +7,7 @@
     align-items: center;
     overflow: hidden;
     font-family: 'NTR', Arial, sans-serif;
-    background: #181818;
+    background: #232323;
 }
 
 .home-container a, .home-nav-bottom-right .nav-logo {
@@ -29,34 +29,64 @@
 
 .home-nav-top {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 60px;
+    right: 60px;
     display: flex;
     align-items: center;
-    gap: 40px;
-    font-size: 2rem;
-    width: auto;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: calc(100vw - 120px);
+    font-size: 1.5rem;
+    z-index: 10;
+    box-sizing: border-box;
+    background: none;
+    padding: 0;
+    gap: 0;
 }
 
 .home-nav-top .nav-logo {
     font-size: 2.5rem;
     color: var(--standard-accent-yellow, #FFFF00);
     font-weight: bold;
-    margin-right: 40px;
     font-family: 'NTR', Arial, sans-serif !important;
+    vertical-align: middle;
+    margin-right: 60px;
+    flex-shrink: 0;
 }
 
-.home-nav-top .top-links {
-    display: flex;
-    gap: 40px;
-}
-
-.home-nav-top-right {
-    position: absolute;
-    top: 40px;
-    right: 60px;
+.home-nav-top .nav-link {
+    margin: 0 20px;
+    color: #fff;
     font-size: 1.5rem;
+    font-family: 'NTR', Arial, sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.home-nav-top .nav-link-sayhi {
+    margin-left: auto;
+    color: var(--standard-accent-yellow, #FFFF00);
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'NTR', Arial, sans-serif !important;
+    text-align: right;
+    padding-left: 60px;
+}
+
+.home-nav-top .nav-link:hover, .home-nav-top .nav-link-sayhi:hover {
+    color: var(--standard-accent-yellow, #FFFF00);
+    transform: scale(1.12);
+}
+
+.nav-logo-left, .nav-links-center, .nav-link-sayhi {
+    display: contents;
+}
+
+.bottom-link-gap {
+    display: inline-block;
+    width: 40px;
 }
 
 .home-nav-bottom-right {
@@ -66,7 +96,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 0;
     font-size: 1.5rem;
 }
 
@@ -83,6 +113,9 @@
     text-align: center;
     padding-bottom: 100px;
     margin-top: 160px;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .home-intro-content {
@@ -169,7 +202,7 @@
 }
 
 .nav-bottom-left {
-    bottom: 40px;
+    bottom: 50px;
     left: 20%;
     transform: translateX(-50%);
 }
@@ -191,6 +224,123 @@
     bottom: 40px;
     left: 60px;
     font-size: 1.5rem;
+}
+
+/* Desktop/Mobile visibility helpers */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 600px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+
+  .mobile-menu-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 1201;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--standard-accent-yellow);
+  }
+  .hamburger-icon {
+    font-size: 2.5rem;
+    color: var(--standard-accent-yellow);
+  }
+  .mobile-side-menu {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 280px;
+    height: 100vh;
+    background: #262626;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.18);
+    z-index: 1202;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 0;
+    transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .mobile-side-menu.open {
+    right: 0;
+  }
+  .mobile-side-menu-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 24px 18px 12px 18px;
+    border-bottom: 1px solid #333;
+    gap: 10px;
+  }
+  .mobile-menu-logo { display: none; }
+  .mobile-menu-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--standard-accent-yellow);
+    text-align: left;
+    margin-left: 0;
+  }
+  .mobile-menu-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--standard-accent-yellow);
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  .mobile-side-menu-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 18px;
+    gap: 18px;
+  }
+  .mobile-side-menu-links a {
+    color: var(--standard-text-white);
+    font-size: 1.2rem;
+    font-family: 'NTR', Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mobile-side-menu-links a:hover {
+    background: var(--standard-accent-yellow);
+    color: #262626;
+  }
+  .mobile-menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: 1200;
+  }
+  .home-content {
+    margin-top: 60px;
+    padding-bottom: 0;
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .intro-desc {
+    font-size: 1.1rem;
+    max-width: 98vw;
+    padding: 0 8px 30px 8px;
+  }
+  .home-nav-top { display: none !important; }
+  .home-nav-bottom-right { display: none !important; }
+  .home-nav-bottom-left { display: none !important; }
 }
 
 @media (max-width: 768px) {
@@ -223,4 +373,55 @@
     .home-intro-content {
         order: -1;
     }
+}
+
+.nav-logo, .mobile-menu-title {
+  font-size: 2.5rem;
+  color: var(--standard-accent-yellow, #FFFF00);
+  font-weight: bold;
+  font-family: 'NTR', Arial, sans-serif !important;
+  text-shadow: none;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  word-break: break-word;
+}
+
+.intro-desc {
+  color: var(--standard-text-white);
+  font-family: "NTR", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  max-width: 800px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.home-nav-top-sayhi {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    font-size: 1.5rem;
+    z-index: 11;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+.home-nav-top a, .home-nav-top-sayhi a {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.home-nav-top, .nav-links-row {
+    align-items: center;
+}
+
+.home-nav-top a, .nav-links-row a {
+    vertical-align: middle;
 } 

@@ -1,5 +1,5 @@
 html, body, #root, .App, .page-container {
-  background: #181818 !important;
+  background: #232323 !important;
 }
 
 html, body {
@@ -21,7 +21,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 :root {
-  --standard-background: #000000;
+  --standard-background: #232323;
   --standard-text-white: #FFFFFF;
   --standard-accent-yellow: #FFFF00;
   --standard-accent-red: #FF533D;
