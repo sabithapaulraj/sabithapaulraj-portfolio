@@ -326,17 +326,20 @@
     background: rgba(0,0,0,0.25);
     z-index: 1200;
   }
-  .home-content {
-    margin-top: 60px;
-    padding-bottom: 0;
-    max-width: 100vw;
-    width: 100vw;
-    overflow-x: hidden;
+  .home-content, .intro-desc {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 50px;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
-  .intro-desc {
-    font-size: 1.1rem;
-    max-width: 98vw;
-    padding: 0 8px 30px 8px;
+  html, body {
+    overflow-y: auto !important;
   }
   .home-nav-top { display: none !important; }
   .home-nav-bottom-right { display: none !important; }

@@ -144,8 +144,18 @@
   }
   
   @media only screen and (max-width: 600px) {
+    #experience, .job-list-root, .job-description, .job-description li {
+      max-width: 92vw;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding-left: 4vw;
+      padding-right: 4vw;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
     #experience {
-      padding-left: 2vw;
+      padding-left: 0vw;
       padding-right: 2vw;
       padding-top: 20px;
       min-height: unset;
@@ -160,37 +170,38 @@
     }
     .MuiTabs-root, .MuiTabs-flexContainer {
       width: 100vw !important;
-      min-width: 0;
-      overflow-x: auto;
+      min-width: unset;
+      overflow-x: auto !important;
+      overflow-y: hidden;
       box-sizing: border-box;
+      margin: 0 !important;
+      padding: 0 80px 0 0 !important;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
     .MuiTab-root, .MuiTab-wrapper {
-      font-size: 13px !important;
+      flex: 0 0 auto !important;
       min-width: 80px !important;
+      max-width: 220px !important;
       padding: 4px 8px !important;
       word-break: break-word;
       overflow-wrap: break-word;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
     .joblist-job-title, .joblist-job-company {
-      font-size: 16px;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      font-size: 18px;
     }
     .joblist-duration {
       font-size: 12px;
     }
     .job-description {
-      font-size: 14px;
-      padding-top: 10px;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      font-size: 16px;
     }
     .job-description li {
-      font-size: 13px;
-      padding-left: 18px;
-      padding-bottom: 8px;
-      word-break: break-word;
-      overflow-wrap: break-word;
+      font-size: 15px;
     }
     .job-description a, .job-description b {
       font-size: 13px;

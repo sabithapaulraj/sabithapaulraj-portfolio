@@ -11,8 +11,6 @@ const routes = [
     { path: '/experience', label: '/experience' },
     { path: '/projects', label: '/projects' },
     { path: '/blogs', label: '/blogs' },
-    { path: '/hackathons', label: '/hackathons' },
-    { path: '/others', label: '/certificates' },
     { path: '/sayhi', label: '/sayhi' },
 ];
 

@@ -154,11 +154,16 @@
 }
 
 @media screen and (max-width: 600px) {
-    .education-container {
-        padding: 20px 2vw;
-        min-width: 0;
-        width: 100vw;
+    .education-container, .timeline-content {
+        max-width: 92vw;
+        width: 100%;
         box-sizing: border-box;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-left: 0px;
+        padding-right: 0px;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
     .section-header {
         text-align: center;
@@ -179,7 +184,7 @@
     .timeline-item {
         width: 100%;
         padding-left: 24px;
-        padding-right: 0;
+        padding-right: 60px;
         margin-bottom: 28px;
     }
     .timeline-item::after {
@@ -191,18 +196,17 @@
         margin-left: 0;
         margin-right: 0;
         padding: 16px 10px;
-        max-width: 98vw;
-        font-size: 15px;
+        font-size: 17px;
         word-break: break-word;
         overflow-wrap: break-word;
     }
     .timeline-content h3 {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 2px;
         word-break: break-word;
     }
     .timeline-content h4 {
-        font-size: 15px;
+        font-size: 17px;
         margin-bottom: 6px;
         word-break: break-word;
     }
@@ -211,7 +215,7 @@
         margin-bottom: 6px;
     }
     .timeline-content ul li {
-        font-size: 13px;
+        font-size: 15px;
         padding-left: 14px;
         margin-bottom: 3px;
         word-break: break-word;
