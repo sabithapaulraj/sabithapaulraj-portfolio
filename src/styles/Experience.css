@@ -206,6 +206,23 @@
     .job-description a, .job-description b {
       font-size: 13px;
     }
+    .tab-scroll-note {
+      display: block;
+      text-align: left;
+      font-size: 16px;
+      color: var(--standard-light-grey);
+      margin-bottom: 4px;
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+      font-style: italic;
+      font-family: 'NTR', sans-serif;
+    }
+  }
+  
+  @media only screen and (min-width: 601px) {
+    .tab-scroll-note {
+      display: none;
+    }
   }
   
   .experience-container {

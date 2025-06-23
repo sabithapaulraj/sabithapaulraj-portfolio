@@ -55,6 +55,7 @@ const JobList: React.FC<JobListProps> = ({ experienceItems, value, handleChange,
 
   return (
     <div className="job-list-root">
+      <div className="tab-scroll-note">please scroll for more --&gt;</div>
       <Tabs
         orientation="horizontal"
         variant="fullWidth"
