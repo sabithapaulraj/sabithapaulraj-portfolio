@@ -175,8 +175,10 @@
 }
 
 .custom-download-cv-button:hover {
-  background-color: var(--standard-dark-grey) !important; 
+  /* Remove background color change */
+  /* background-color: var(--standard-dark-grey) !important; */
   box-shadow: none;
+  transform: scale(1.08);
 }
 
 .custom-download-cv-button svg {
