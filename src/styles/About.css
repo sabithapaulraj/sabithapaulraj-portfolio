@@ -111,6 +111,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 12px;
+    padding-right: 40px;
   }
   .about-image img {
     display: block;

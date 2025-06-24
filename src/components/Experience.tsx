@@ -14,14 +14,13 @@ const Experience: React.FC = () => {
       duration: "October 2024 - March 2025",
       desc: [
        "Automated backend workflows handling over 1 million records using Python, SQL, VBA, and VBScript, reducing manual effort and delays by 60%.",
-       "Optimized relational databases (RDBMS) by fixing SQL bugs, improving query performance, and adding features like station-wise integration progress tracking.",
+       "Optimized RDBMS by fixing SQL bugs, tuning queries, and adding station-wise progress tracking for global deployments.",
        "Developed Tableau dashboards to monitor the lifecycle of testing procedural documents and LOP progress across multiple global BMW plants.Now actively used in Thailand, Brazil, Egypt, Indonesia, Malaysia, and Vietnam.",
        "Created an AI-powered document versioning agent using sentence transformers to automatically detect changes, saving over 10 hours weekly on manual compliance checks.",
-       "Built a PowerPoint report generator for Plant Regulations Reporting and COP Change Communication using SQL and VBA, streamlining compliance documentation.",
-       "Created automated data fetching scripts for Vehicle Inspection audits and SALAPA option descriptions for BMW India models.",
-       "Built a Change Communication Tracker with KPI debugging and an intuitive frontend, ensuring clear traceability and communication across departments.",
-       "Designed the SBWE Cockpit — a dynamic dashboard that tracks action point progress, significantly improving cross-team accountability.",
-       "Developed a Parts Inventory Tracker using Excel macros and formulas to help teams manage stock and make data-driven procurement decisions.",
+       "Built automated reporting and tracking tools—including a PowerPoint generator for compliance (COP, Plant Regulations), a Change Communication Tracker with KPI debugging, and the SBWE Cockpit—to streamline cross-department collaboration and accountability",
+       "Developed Excel and SQL-based solutions like the Parts Inventory Tracker and data fetchers for Vehicle Inspection and SALAPA options, enhancing audit readiness and data-driven decision-making.",
+       
+      
       ]
     },
     "Tech Society": {
@@ -45,7 +44,7 @@ const Experience: React.FC = () => {
     },
     "Math Club": {
       jobTitle: "Coordinator @ ",
-      duration: "June 2024 - July 2024",
+      duration: "August 2023 - October 2024",
       desc: [
         "Planned and organized a range of math-focused events — from interactive game-based competitions to technical math challenges, aimed at improving problem-solving engagement among students.",
         "Managed the end-to-end registration process, tracked attendance and on-duty approvals, and ensured smooth coordination during event execution.",
