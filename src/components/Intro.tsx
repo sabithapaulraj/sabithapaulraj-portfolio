@@ -58,7 +58,7 @@ class Intro extends React.Component<{}, IntroState> {
           </div>
 
           <div className="intro-actions">
-            <a href="/SabithaPaulraj_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Sabitha_Paulraj_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button className="custom-download-cv-button">
                 <FiDownload /> View Resume
               </Button>
